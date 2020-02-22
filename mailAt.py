@@ -56,8 +56,5 @@ for x in range(sayi):
     message["To"] = receiver
     message.attach(gonder_text)
     message.attach(part)
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(sender, password)
     server.sendmail(sender, receiver, message.as_string())
     print("mail gonderildi")
